@@ -5,7 +5,7 @@ from views import user_router, assets_router
 app = FastAPI()
 router = APIRouter()
 
-@router.get('')
+@router.get('/')
 def first():
     return 'Hello world!'
 

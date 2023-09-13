@@ -7,7 +7,7 @@ class User(Base):
     __tablename__= 'user'
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
-    favorites = relationship('favorite', backref='user')
+    favorites = relationship('Favorite', backref='user', lazy='subquery')
 
 class Favorite(Base):
     __tablename__= 'favorite'
